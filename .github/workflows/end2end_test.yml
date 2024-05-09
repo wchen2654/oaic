@@ -40,9 +40,7 @@ jobs:
           sudo ldconfig
     - name: Install Kubernetes
       run: |
-          git clone https://github.com/openaicellular/kubernetes-xenial.git
-          cd kubernetes-xenial
-          sudo dpkg -i kubernetes-cni_0.7.5-00_amd64_b38a324bb34f923d353203adf0e048f3b911f49fa32f1d82051a71ecfe2cd184.deb
+          sudo apt remove containernetworking-plugins
     - name: Install O-RAN Near Real-Time RIC
       run: |
           # Step 2: Install Kubernetes, Docker, and Helm (4 minutes)
