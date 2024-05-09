@@ -40,6 +40,9 @@ jobs:
           sudo ldconfig
     - name: Install O-RAN Near Real-Time RIC
       run: |
+          sudo dpkg -r kubeadm
+          sudo dpkg -r kubelet
+          sudo dpkg -r kubernetes-cni
           # Step 2: Install Kubernetes, Docker, and Helm (4 minutes)
           cd RIC-Deployment/tools/k8s/bin
           ./gen-cloud-init.sh
