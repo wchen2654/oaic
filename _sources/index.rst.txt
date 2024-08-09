@@ -38,7 +38,8 @@ Welcome to OAIC's documentation!
    example_xapp_deployment.rst
    xapp_deployment.rst
    nexran1.rst
-   xapp_python.rst
+   ssxapp.rst
+   
    
 .. toctree::
    :maxdepth: 2
@@ -49,6 +50,16 @@ Welcome to OAIC's documentation!
    kubectl_commands.rst
    oaic_t.rst
 
+.. toctree::
+   :maxdepth: 2
+   :caption: 2024 OAIC Workshop
+
+   2024_workshop_gcp.rst
+   2024_workshop_ss.rst
+   xapp_python.rst
+   edgeric-workshop-tutorial.rst
+   OAIC-2024-Workshop-oai-flexric-documentation.rst
+   OAIC-T-fast-setup.rst
 
 Indices and tables
 ==================

@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Running the Nexran Xapp &mdash; OAIC 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
 
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Developing a custom xApp in Python" href="xapp_python.html" />
+    <link rel="next" title="Running the SS Xapp" href="ssxapp.html" />
     <link rel="prev" title="xApp Deployment - General Guidelines" href="xapp_deployment.html" /> 
 </head>
 
@@ -77,7 +79,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="xapp_python.html">Developing a custom xApp in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssxapp.html">Running the SS Xapp</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Additional Features</span></p>
 <ul>
@@ -85,6 +87,15 @@
 <li class="toctree-l1"><a class="reference internal" href="srsRAN_additional_features.html">srsRAN Additional Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kubectl_commands.html">Kubectl Commands - Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oaic_t.html">OAIC-T</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2024 OAIC Workshop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2024_workshop_gcp.html">Day 1 - Google Cloud Platform Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024_workshop_ss.html">Day 1 - Secure Slicing xApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xapp_python.html">Day 2 - Developing a custom xApp in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edgeric-workshop-tutorial.html">Day 2 - EdgeRIC tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OAIC-2024-Workshop-oai-flexric-documentation.html">Day 2 - OAI/FlexRIC Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OAIC-T-fast-setup.html">Day 3 - OAIC-T</a></li>
 </ul>
 
         </div>
@@ -112,16 +123,16 @@
            <div itemprop="articleBody">
              
   <section id="running-the-nexran-xapp">
-<h1>Running the Nexran Xapp<a class="headerlink" href="#running-the-nexran-xapp" title="Permalink to this heading"></a></h1>
+<h1>Running the Nexran Xapp<a class="headerlink" href="#running-the-nexran-xapp" title="Link to this heading"></a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>The xapp is deployed in the near real time ric (3rd party APP). This deployed xapp then performs its functionality which in this case is RAN slicing.</p>
 <a class="reference internal image-reference" href="_images/nexran_xapp_diagram.png"><img alt="Nexran Xapp diagram" src="_images/nexran_xapp_diagram.png" style="width: 80%;" /></a>
 <p>Powder’s Nexran xapp implements ran slicing by sending instructions to RAN nodes, that performs custom resource allocation and we bind UE’s to those slices of allocated resources.</p>
 <p>The xapp has a southbound interface to the RIC where it can send commands down to the nodes and a northbound interface where high level commands can be issued by the user.</p>
 </section>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading"></a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h2>
 <p>First we need to clone down the srslte modified with e2 specifically for NEXRAN</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>oaic
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/openaicellular/srslte-e2
@@ -165,7 +176,7 @@ sudo<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> 
 </div>
 </section>
 <section id="running-the-xapp">
-<h2>Running the xapp<a class="headerlink" href="#running-the-xapp" title="Permalink to this heading"></a></h2>
+<h2>Running the xapp<a class="headerlink" href="#running-the-xapp" title="Link to this heading"></a></h2>
 <p>Terminal 1: Start the Core Network/Ues</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>ip<span class="w"> </span>netns<span class="w"> </span>add<span class="w"> </span>ue1
 sudo<span class="w"> </span>srsepc
@@ -211,7 +222,7 @@ sudo<span class="w"> </span>srsepc
 </pre></div>
 </div>
 <section id="deploying-the-xapp">
-<h3>Deploying the xApp<a class="headerlink" href="#deploying-the-xapp" title="Permalink to this heading"></a></h3>
+<h3>Deploying the xApp<a class="headerlink" href="#deploying-the-xapp" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://</span><span class="nv">$KONG_PROXY</span><span class="s2">:32080/onboard/api/v1/onboard/download&quot;</span><span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span>--data-binary<span class="w"> </span><span class="s2">&quot;@nexran-onboard.url&quot;</span>
 curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;http://</span><span class="nv">$KONG_PROXY</span><span class="s2">:32080/onboard/api/v1/charts&quot;</span>
 curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://</span><span class="nv">$KONG_PROXY</span><span class="s2">:32080/appmgr/ric/v1/xapps&quot;</span><span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span>--data-raw<span class="w"> </span><span class="s1">&#39;{&quot;xappName&quot;: &quot;nexran&quot;}&#39;</span>
@@ -256,7 +267,7 @@ curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="xapp_deployment.html" class="btn btn-neutral float-left" title="xApp Deployment - General Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="xapp_python.html" class="btn btn-neutral float-right" title="Developing a custom xApp in Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ssxapp.html" class="btn btn-neutral float-right" title="Running the SS Xapp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

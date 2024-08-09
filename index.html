@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to OAIC’s documentation! &mdash; OAIC 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
 
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -68,7 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="example_xapp_deployment.html">KPIMON xApp Deployment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xapp_deployment.html">xApp Deployment - General Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nexran1.html">Running the Nexran Xapp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xapp_python.html">Developing a custom xApp in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssxapp.html">Running the SS Xapp</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Additional Features</span></p>
 <ul>
@@ -76,6 +78,15 @@
 <li class="toctree-l1"><a class="reference internal" href="srsRAN_additional_features.html">srsRAN Additional Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kubectl_commands.html">Kubectl Commands - Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oaic_t.html">OAIC-T</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2024 OAIC Workshop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2024_workshop_gcp.html">Day 1 - Google Cloud Platform Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024_workshop_ss.html">Day 1 - Secure Slicing xApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xapp_python.html">Day 2 - Developing a custom xApp in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edgeric-workshop-tutorial.html">Day 2 - EdgeRIC tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OAIC-2024-Workshop-oai-flexric-documentation.html">Day 2 - OAI/FlexRIC Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OAIC-T-fast-setup.html">Day 3 - OAIC-T</a></li>
 </ul>
 
         </div>
@@ -103,7 +114,7 @@
            <div itemprop="articleBody">
              
   <section id="welcome-to-oaic-s-documentation">
-<h1>Welcome to OAIC’s documentation!<a class="headerlink" href="#welcome-to-oaic-s-documentation" title="Permalink to this heading"></a></h1>
+<h1>Welcome to OAIC’s documentation!<a class="headerlink" href="#welcome-to-oaic-s-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a><ul>
@@ -200,14 +211,12 @@
 <li class="toctree-l2"><a class="reference internal" href="nexran1.html#running-the-xapp">Running the xapp</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="xapp_python.html">Developing a custom xApp in Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#development">Development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#deployment">Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#demonstration">Demonstration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#undeployment">Undeployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssxapp.html">Running the SS Xapp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ssxapp.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssxapp.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssxapp.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssxapp.html#deploying-the-ss-xapp">Deploying the SS xApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssxapp.html#running-the-xapp">Running the xApp</a></li>
 </ul>
 </li>
 </ul>
@@ -243,9 +252,63 @@
 </li>
 </ul>
 </div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">2024 OAIC Workshop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2024_workshop_gcp.html">Day 1 - Google Cloud Platform Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#accessing-gcp">Accessing GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#creating-the-virtual-machine">Creating the Virtual Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#demo-testing">Demo/Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#vnc-access-optional">VNC access (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_gcp.html#alternatives">Alternatives</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024_workshop_ss.html">Day 1 - Secure Slicing xApp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#setup-srslte-with-e2-agent">Setup - Srslte with E2 Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#setup-5g-network">Setup - 5G Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#deploying-the-ss-xapp">Deploying the SS xApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024_workshop_ss.html#running-the-xapp">Running the xApp</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="xapp_python.html">Day 2 - Developing a custom xApp in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#deployment-workflow">Deployment Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#development">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#deployment">Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#demonstration">Demonstration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#undeployment">Undeployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xapp_python.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="edgeric-workshop-tutorial.html">Day 2 - EdgeRIC tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="edgeric-workshop-tutorial.html#app-demo-mac-scheduling">μApp demo: MAC scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edgeric-workshop-tutorial.html#training-reinforcement-learning-scheduling-policy">Training Reinforcement Learning scheduling Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edgeric-workshop-tutorial.html#install-srsran-supporting-edgeric-hooks">Install srsRAN supporting EdgeRIC hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OAIC-2024-Workshop-oai-flexric-documentation.html">Day 2 - OAI/FlexRIC Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OAIC-2024-Workshop-oai-flexric-documentation.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAIC-2024-Workshop-oai-flexric-documentation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAIC-2024-Workshop-oai-flexric-documentation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OAIC-T-fast-setup.html">Day 3 - OAIC-T</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OAIC-T-fast-setup.html#about-oaic-t">About OAIC-T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAIC-T-fast-setup.html#run-the-network-before-deploying-the-xapp">Run the Network before Deploying the xApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAIC-T-fast-setup.html#verifying-xapp-deployment">Verifying xApp Deployment</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
